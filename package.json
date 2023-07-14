@@ -1,0 +1,28 @@
+{
+  "name": "hydro",
+  "version": "1.0.0",
+  "description": "hydro portfolio",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hello-world-ttj/hydro.git"
+  },
+  "author": "hello-world-ttj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hello-world-ttj/hydro/issues"
+  },
+  "homepage": "https://github.com/hello-world-ttj/hydro#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.4",
+    "nodemon": "^3.0.1",
+    "volleyball": "^1.5.1"
+  }
+}
