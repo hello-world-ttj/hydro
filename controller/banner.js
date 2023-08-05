@@ -10,7 +10,7 @@ cloudinary.config({
 
 const banner_controller = async (req, res) => { 
     try {
-        const folder = "profile"; 
+        const folder = "banner"; 
         cloudinary.api.resources(
         {
             type: "upload",
@@ -20,7 +20,7 @@ const banner_controller = async (req, res) => {
             if (error) {
             console.error("Error retrieving images:", error);
             } else {
-                return response(res, 200, "User profile updated", result.resources);
+                return response(res, 200, "User Banner data", result.resources);
             }
         }
         );
