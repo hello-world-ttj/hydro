@@ -8,9 +8,9 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const banner_controller = async (req, res) => { 
+const picture_controller = async (req, res) => { 
     try {
-        const folder = "banner"; 
+        const folder = req.query.folder; 
         cloudinary.api.resources(
         {
             type: "upload",
@@ -20,7 +20,7 @@ const banner_controller = async (req, res) => {
             if (error) {
             console.error("Error retrieving images:", error);
             } else {
-                return response(res, 200, "User Banner data", result.resources);
+                return response(res, 200, "User picture data", result.resources);
             }
         }
         );
@@ -29,4 +29,4 @@ const banner_controller = async (req, res) => {
     }
 }
 
-module.exports = banner_controller
+module.exports = picture_controller
